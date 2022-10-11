@@ -10,21 +10,21 @@ typedef struct {
 typedef struct TPolinomio *polinomio;
 
 polinomio criaPolinomio();
-void terminaPolinomio(polinomio l);
-int pesquisaPolinomio(polinomio l,int exp,TMonomio *e);
-int insereFinal(polinomio l,TMonomio e);
-int getMonomio(polinomio l, int posicao, TMonomio *e);
-int polinomioVazia(polinomio l);
-int polinomioCheia(polinomio l);
-int tamanhoPolinomio(polinomio l);
-int insereInicio(polinomio l, TMonomio e);
-int inserePosicao(polinomio l, TMonomio e, int indice);
+void terminaPolinomio(polinomio p);
+int pesquisaPolinomio(polinomio p,int exp,TMonomio *m);
+int insereFinal(polinomio p,TMonomio m);
+int insereInicio(polinomio p, TMonomio m);
+int getMonomio(polinomio p, int posicao, TMonomio *m);
+int polinomioVazia(polinomio p);
+int polinomioCheia(polinomio p);
+int tamanhoPolinomio(polinomio p);
+int inserePosicao(polinomio p, TMonomio m, int indice);
 /*
 Verefica o indice do primeiro expoente menor que o expoente passado por parametro
 Parametros: l (lista de monomios), expoente a ser comparado com outros expoentes da lista
-Retorno: O indice do expoente menor que o passado por parametro na lista, caso ele seja o menor retorna 0 
+Retorno: O indice do expoente menor que o passado por parametro na lista, caso não consiga alocar memória retorna 0 
 */
-int verficaExpoenteMenor(polinomio l,int expoente);
+int verficaExpoenteMenor(polinomio p,int expoente);
 
 
 #endif
