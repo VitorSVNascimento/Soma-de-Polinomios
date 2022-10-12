@@ -1,8 +1,22 @@
 # Soma-de-Polinomios
- Realiza a soma de dois polinomios atráves dos monomios fornecidos pelo usuário
+ Realiza a soma de dois polinomios fornecidos pelo usuário, estes polinomio são formados atráves dos monomio fornecidos pelo usuário
 
- São criadas por alocação dinamica de memória duas listas de monomios formando um polinômio
- Um monomio contém uma base e um expoente, e o usuario pode fornecer quantos forém possivel
+Feito para a resolução de uma atividade da lista de exercicios de Estruturas de Dados 1 na graduação em Sistemas para a internet pelo IF Sudeste MG-Capus Barbacena
+
+## Tecnoligia usada
+ Linguagem C em modo texto;
  
- Ao fim da leitura dos monomios os polinomios resultantes são somados e seu resultado é printado na tela
+# Como Executar 
+Requisitos 
+Compilador gcc instalado
+```bash
+# clonar repositório 
+git clone https://github.com/VitorSVNascimento/Soma-de-Polinomios   
+# entrar na pasta do projeto
+cd Soma-de-Polinomios
+# compile o código
+gcc *.c -o nomeExcutavel
+# executar o código
+./nomeExecutavel
+```
 

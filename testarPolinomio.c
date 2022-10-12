@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
 #include "polinomio.h"
-#define BASE_MSG "\nForneça a base: (numero inteiro)"
-#define EXP_MSG "\nForneça o Expoente: (numero natural)"
+#define BASE_MSG "\nForneça a base (numero inteiro):"
+#define EXP_MSG "\nForneça o Expoente (numero natural):"
 #define ERRO_POL_MSG "\nErro ao criar a lista de monomios(polinômio)"
 int lerInteiro(char *msg){
     int n;
@@ -32,7 +33,7 @@ polinomio obtemPolinomio(polinomio lpolinomio){
         inserePosicao(lpolinomio,monomio,pos);
         
         printf("\nDeseja Fornecer algum outro monomio?");
-        printf("\n1-Sim | 2-Não");
+        printf("\n1-Sim | 2-Não:");
         scanf("%d",&s_n);
 
     } while (s_n==1);
@@ -51,6 +52,7 @@ int testarPolinomio(){
     obtemPolinomio(p1);
     printf("\n-------Polinomio 2-------");
     obtemPolinomio(p2);
+    system("cls || clear");
     polinomioToString(p1);
     printf("\n+");
     polinomioToString(p2);
