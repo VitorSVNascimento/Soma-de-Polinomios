@@ -155,3 +155,63 @@ int verficaExpoenteMenor(polinomio p,int expoente){
     }
     return i;
 }
+
+polinomio somaPolinomio(polinomio poli1, polinomio poli2){
+    polinomio resultado = criaPolinomio();
+    TNodo *n1,*n2;
+    TMonomio mono;
+
+    n1 = poli1->incio;
+    n2 = poli2->incio;
+    while (n1!=NULL && n2!=NULL){
+        if(n1->info.expoente == n2->info.expoente){
+            mono.base = n1->info.base + n2->info.base;
+            mono.expoente = n1->info.expoente;
+            n1 = n1->proximo;   
+            n2 = n2->proximo;
+            insereFinal(resultado,mono);   
+        }else if(n1->info.expoente > n2->info.expoente){
+            mono.base = n1->info.base;
+            mono.expoente = n1->info.expoente;
+            n1=n1->proximo;
+            insereFinal(resultado,mono);
+        }else{
+            mono.base = n2->info.base;
+            mono.expoente = n2->info.expoente;
+            n2=n2->proximo;
+            insereFinal(resultado,mono);
+        }
+    }
+
+    while (n1!=NULL){
+        mono.base = n1->info.base;
+        mono.expoente = n1->info.expoente;
+        insereFinal(resultado,mono);
+        n1=n1->proximo;        
+    }
+
+    while (n2!=NULL){
+        mono.base = n2->info.base;
+        mono.expoente = n2->info.expoente;
+        insereFinal(resultado,mono);
+        n2=n2->proximo;        
+    }
+
+    return resultado;
+    
+}
+
+void polinomioToString(polinomio poli){
+    TNodo *nodo;
+    nodo = poli->incio;
+    printf("\n\t");
+    while (nodo->proximo!=NULL){
+        printf("%dx^%d ",nodo->info.base,nodo->info.expoente);
+        if(nodo->proximo->info.base>=0)
+            printf(" + ");
+        nodo = nodo->proximo;
+    }
+    printf("%dx^%d",nodo->info.base,nodo->info.expoente);
+
+    return;
+}

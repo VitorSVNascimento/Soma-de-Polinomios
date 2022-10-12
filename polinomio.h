@@ -26,5 +26,7 @@ Retorno: O indice do expoente menor que o passado por parametro na lista, caso n
 */
 int verficaExpoenteMenor(polinomio p,int expoente);
 
+polinomio somaPolinomio(polinomio poli1, polinomio poli2);
+void polinomioToString(polinomio poli);
 
 #endif
