@@ -3,7 +3,7 @@
 
 Feito para a resolução de uma atividade da lista de exercicios de Estruturas de Dados 1 na graduação em Sistemas para a internet pelo IF Sudeste MG-Capus Barbacena
 
-##Imagens da execução
+## Imagens da execução
 
 ### Obtendo o polinomio 1
 
