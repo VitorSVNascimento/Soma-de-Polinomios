@@ -25,6 +25,7 @@ int lerExpoente(char *msg){
 polinomio obtemPolinomio(polinomio lpolinomio){
     int s_n,pos;
     TMonomio monomio;
+    
     do{
       
         monomio.base = lerInteiro(BASE_MSG);
@@ -43,7 +44,7 @@ polinomio obtemPolinomio(polinomio lpolinomio){
 
 int testarPolinomio(){
     setlocale(LC_ALL,"portuguese");
-    polinomio p1 = criaPolinomio(),p2 = criaPolinomio(),r;
+    polinomio p1 = criaPolinomio(),p2 = criaPolinomio(),result;
     if(p1==NULL || p2==NULL){
         printf(ERRO_POL_MSG);
         return 1;
@@ -57,11 +58,11 @@ int testarPolinomio(){
     printf("\n+");
     polinomioToString(p2);
     printf("\n-------------------------");
-    r = somaPolinomio(p1,p2);
-    polinomioToString(r);
+    result = somaPolinomio(p1,p2);
+    polinomioToString(result);
     terminaPolinomio(p1);
     terminaPolinomio(p2);
-    terminaPolinomio (r);
+    terminaPolinomio (result);
     return 0;
 }
 

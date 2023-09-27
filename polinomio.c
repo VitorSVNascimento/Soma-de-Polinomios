@@ -65,8 +65,8 @@ int insereFinal(polinomio p, TMonomio m){
     if(p->incio==NULL)
         p->incio = nodo;
     else
-        p->fim->proximo = nodo;//fazendo o proximo do fim deixar de ser NULL para ser o endereço de nodo
-    p->fim = nodo;//marcando o fim com o endereço de nodo
+        p->fim->proximo = nodo;//fazendo o proximo do fim deixar de ser NULL para ser o endereï¿½o de nodo
+    p->fim = nodo;//marcando o fim com o endereï¿½o de nodo
     p->tamanho++;
     return 1;    
 }
@@ -142,12 +142,14 @@ int verficaExpoenteMenor(polinomio p,int expoente){
     int i;
     if(p->incio==NULL)
         return 1;
-    TNodo *nodo = (TNodo *)malloc(sizeof(TNodo));
+    TNodo* nodo = (TNodo *)malloc(sizeof(TNodo));
+
     if(nodo==NULL)
         return 0;
     i=1;
     nodo = p->incio;
     while (nodo!=NULL){
+        
         if(nodo->info.expoente<expoente)
             break;
         nodo=nodo->proximo;
